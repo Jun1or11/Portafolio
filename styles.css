@@ -79,6 +79,12 @@ img {
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border-dark);
   z-index: 1000;
+  transition: height var(--transition), background-color var(--transition);
+}
+
+.navbar--scrolled {
+  height: 52px;
+  background-color: rgba(10, 10, 10, 0.98);
 }
 
 .navbar__container {
@@ -93,10 +99,22 @@ img {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-text-light);
+  transition: font-size var(--transition);
 }
 
-.navbar__logo-dot {
+.logo-cursor {
   color: var(--color-accent);
+  font-weight: 300;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.navbar--scrolled .navbar__logo {
+  font-size: 1.25rem;
 }
 
 .navbar__links {
@@ -125,6 +143,11 @@ img {
 
 .navbar__link:hover {
   color: var(--color-accent);
+}
+
+.navbar__link--active {
+  color: var(--color-accent);
+  font-weight: 600;
 }
 
 .navbar__link:hover::after {
@@ -165,6 +188,7 @@ img {
 /* ===== SECTIONS ===== */
 section {
   padding: 5rem 0;
+  scroll-margin-top: 80px;
 }
 
 .section__title {
