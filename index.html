@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div class="progress-bar" id="progressBar"></div>
+
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" role="navigation" aria-label="Menú principal">
     <div class="navbar__container container">
@@ -50,11 +53,16 @@
 
   <!-- ===== HERO / INICIO ===== -->
   <section id="inicio" class="hero">
+    <div class="hero__blobs">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="hero__blob hero__blob--3"></div>
+    </div>
     <div class="hero__container container fade-in">
       <div class="hero__content">
         <p class="hero__greeting">Hola, soy</p>
         <h1 class="hero__title">Junior</h1>
-        <p class="hero__role">Full Stack Developer</p>
+        <p class="hero__role"><span id="typing-text"></span><span class="typing-cursor">|</span></p>
         <p class="hero__description">
           Construyo aplicaciones web modernas, escalables y con experiencia de
           usuario excepcional. Me apasiona convertir ideas en soluciones digitales.

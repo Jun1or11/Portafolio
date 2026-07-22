@@ -1,3 +1,38 @@
+// ===== SCROLL PROGRESS BAR =====
+const progressBar = document.getElementById('progressBar');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = progress + '%';
+});
+
+// ===== TYPING EFFECT =====
+const typingText = document.getElementById('typing-text');
+const text = 'Full Stack Developer';
+let index = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  if (!isDeleting && index <= text.length) {
+    typingText.textContent = text.slice(0, index);
+    index++;
+    setTimeout(typeEffect, 80);
+  } else if (index > 0) {
+    isDeleting = true;
+    typingText.textContent = text.slice(0, index);
+    index--;
+    setTimeout(typeEffect, 30);
+  } else {
+    isDeleting = false;
+    index = 0;
+    setTimeout(typeEffect, 1000);
+  }
+}
+
+typeEffect();
+
 // ===== MENÚ HAMBURGUESA =====
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
@@ -8,7 +43,6 @@ hamburger.addEventListener('click', () => {
   hamburger.setAttribute('aria-expanded', isOpen);
 });
 
-// Cerrar menú al hacer click en un enlace (mobile)
 navLinks.querySelectorAll('.navbar__link').forEach((link) => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
