@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio personal - Full Stack Developer" />
+  <title>Junior | Full Stack Developer</title>
+
+  <!-- Google Fonts: Space Grotesk (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Devicon CDN para iconos de skills -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+  />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Menú principal">
+    <div class="navbar__container container">
+      <a href="#inicio" class="navbar__logo">Junior<span class="navbar__logo-dot">.</span></a>
+      <button
+        class="navbar__hamburger"
+        id="hamburger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#inicio" class="navbar__link">Inicio</a></li>
+        <li><a href="#sobre-mi" class="navbar__link">Sobre mí</a></li>
+        <li><a href="#proyectos" class="navbar__link">Proyectos</a></li>
+        <li><a href="#skills" class="navbar__link">Skills</a></li>
+        <li><a href="#contacto" class="navbar__link">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO / INICIO ===== -->
+  <section id="inicio" class="hero">
+    <div class="hero__container container fade-in">
+      <p class="hero__greeting">Hola, soy</p>
+      <h1 class="hero__title">Junior</h1>
+      <p class="hero__role">Full Stack Developer</p>
+      <p class="hero__description">
+        Construyo aplicaciones web modernas, escalables y con experiencia de
+        usuario excepcional. Me apasiona convertir ideas en soluciones digitales.
+      </p>
+      <div class="hero__buttons">
+        <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+        <a href="#contacto" class="btn btn--outline">Contactar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE MÍ ===== -->
+  <section id="sobre-mi" class="about">
+    <div class="container">
+      <h2 class="section__title fade-in">Sobre mí</h2>
+      <div class="about__content fade-in">
+        <p class="about__text">
+          Soy desarrollador Full Stack con experiencia en tecnologías modernas
+          como <strong>FastAPI</strong>, <strong>React</strong>,
+          <strong>TypeScript</strong> y <strong>PostgreSQL</strong>.
+          Estudio en la <strong>Universidad Privada del Norte</strong>,
+          Facultad de Ingeniería, donde combino la teoría con proyectos
+          prácticos del mundo real.
+        </p>
+        <p class="about__text">
+          Me interesa especialmente el desarrollo de APIs robustas, la
+          integración de pasarelas de pago, los sistemas en tiempo real con
+          WebSockets y el despliegue en la nube (Render, Vercel). Siempre
+          estoy aprendiendo algo nuevo y buscando desafíos que me hagan crecer.
+        </p>
+        <div class="about__stack">
+          <h3 class="about__stack-title">Stack principal</h3>
+          <div class="about__badges">
+            <span class="badge">Python</span>
+            <span class="badge">FastAPI</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">React</span>
+            <span class="badge">PostgreSQL</span>
+            <span class="badge">Docker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS ===== -->
+  <section id="proyectos" class="projects">
+    <div class="container">
+      <h2 class="section__title fade-in">Proyectos</h2>
+      <div class="projects__grid">
+        <!-- Proyecto 1: Hotel Nova -->
+        <article class="project-card fade-in">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span class="project-card__emoji">🏨</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Hotel Nova</h3>
+            <p class="project-card__description">
+              Plataforma de gestión hotelera con reservas en línea,
+              integración de pagos con Mercado Pago y panel administrativo.
+              Desplegada en Render y Vercel.
+            </p>
+            <div class="project-card__techs">
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">Mercado Pago</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--small btn--primary">Demo</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--small btn--outline">Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 2: Dual Search -->
+        <article class="project-card fade-in">
+          <div class="project-card__image">
+            <div class="project-card__placeholder">
+              <span class="project-card__emoji">🎮</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Dual Search</h3>
+            <p class="project-card__description">
+              Juego 1v1 multijugador en tiempo real con WebSockets.
+              Sistema de emparejamiento, búsqueda simultánea y
+              partidas en vivo. Construido con FastAPI y React + Vite.
+            </p>
+            <div class="project-card__techs">
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">WebSockets</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">Vite</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--small btn--primary">Demo</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--small btn--outline">Repo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section__title fade-in">Skills</h2>
+      <div class="skills__grid fade-in">
+        <div class="skill-item">
+          <i class="devicon-python-plain colored"></i>
+          <span>Python</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-fastapi-plain colored"></i>
+          <span>FastAPI</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-typescript-plain colored"></i>
+          <span>TypeScript</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-react-original colored"></i>
+          <span>React</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-postgresql-plain colored"></i>
+          <span>PostgreSQL</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-docker-plain colored"></i>
+          <span>Docker</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-git-plain colored"></i>
+          <span>Git</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-html5-plain colored"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-css3-plain colored"></i>
+          <span>CSS3</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-javascript-plain colored"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-nodejs-plain colored"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="skill-item">
+          <i class="devicon-linux-plain colored"></i>
+          <span>Linux</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2 class="section__title fade-in">Contacto</h2>
+      <div class="contact__content fade-in">
+        <p class="contact__text">
+          ¿Tienes un proyecto en mente o quieres colaborar? ¡Hablemos!
+        </p>
+        <div class="contact__links">
+          <a href="mailto:junior@email.com" class="contact__link">
+            <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            junior@email.com
+          </a>
+          <a
+            href="https://github.com/Jun1or11"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact__link"
+          >
+            <svg class="contact__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z" />
+            </svg>
+            @Jun1or11
+          </a>
+          <a
+            href="https://linkedin.com/in/junior"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact__link"
+          >
+            <svg class="contact__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            /in/junior
+          </a>
+        </div>
+        <a href="assets/cv.pdf" download class="btn btn--primary contact__cv-btn">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Descargar CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        &copy; <span id="year"></span> Junior. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
